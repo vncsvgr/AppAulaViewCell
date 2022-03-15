@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="viewCell.MainPage">
+
+    <StackLayout>
+        
+        <Frame BackgroundColor="Aquamarine" Padding="25">
+            <Label Text="ALUNOS" HorizontalTextAlignment="Center" FontSize="36" FontAttributes="Bold" TextColor="Black" />
+        </Frame>
+
+        <ListView x:Name="lstAlunos" ItemSelected="lstAlunos_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Nome}" WidthRequest="150" />
+                            <Label Text="{Binding Curso}" WidthRequest="150" />
+                            <Label Text="{Binding Cidade}" WidthRequest="150" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>
